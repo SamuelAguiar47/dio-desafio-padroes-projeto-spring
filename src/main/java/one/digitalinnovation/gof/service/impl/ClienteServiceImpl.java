@@ -22,14 +22,16 @@ import one.digitalinnovation.gof.service.ViaCepService;
 @Service
 public class ClienteServiceImpl implements ClienteService {
 
-	// TODO Singleton: Injetar os componentes do Spring com @Autowired.
+	// Singleton: Injetar os componentes do Spring com @Autowired.
+	@Autowired
+	private ClienteRepository clienteRepository;
 	// TODO Strategy: Implementar os métodos definidos na interface.
 	// TODO Facade: Abstrair integrações com subsistemas, provendo uma interface simples.
 
 	@Override
 	public Iterable<Cliente> buscarTodos() {
-		// FIXME Buscar todos os Clientes.
-		return null;
+		// Buscar todos os Clientes.
+		return clienteRepository.findAll();
 	}
 
 	@Override
