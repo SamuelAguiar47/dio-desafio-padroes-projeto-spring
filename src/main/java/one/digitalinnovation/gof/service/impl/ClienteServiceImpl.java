@@ -36,8 +36,9 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	public Cliente buscarPorId(Long id) {
-		// FIXME Buscar Cliente por ID.
-		return null;
+		// Buscar Cliente por ID.
+		Optional<Cliente> cliente = clienteRepository.findById(id);
+		return cliente.get();
 	}
 
 	@Override
