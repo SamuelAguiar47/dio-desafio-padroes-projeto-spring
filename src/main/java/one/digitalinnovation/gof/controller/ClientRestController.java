@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import one.digitalinnovation.gof.model.Cliente;
-//import one.digitalinnovation.gof.service.ClienteService;
+import one.digitalinnovation.gof.service.ClienteService;
 
 /**
  * Esse {@link RestController} representa nossa <b>Facade</b>, pois abstrai toda
@@ -24,7 +24,7 @@ import one.digitalinnovation.gof.model.Cliente;
 @RestController
 @RequestMapping("clientes")
 public class ClientRestController {
-   	/*@Autowired
+   	@Autowired
     private ClienteService clienteService;
 	
     @GetMapping
@@ -53,5 +53,5 @@ public class ClientRestController {
 	public ResponseEntity<Void> deletar(@PathVariable Long id) {
 		clienteService.deletar(id);
 		return ResponseEntity.ok().build();
-	}*/
+	}
 }
